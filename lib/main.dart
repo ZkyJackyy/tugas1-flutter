@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/screen/page_dua.dart';
+import 'package:latihan1/screen/page_empat.dart';
+import 'package:latihan1/screen/page_satu.dart';
+import 'package:latihan1/screen/page_tiga.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +54,53 @@ class PageOne extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Text("Muhammad zacky nim: 2301092028"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("selamat datang di projek 1 Flutter"),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageSatu()));
+            },
+            //pindah ke page1
+            
+            color: Colors.orange,
+            child: Text('page 1', style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
+            ),
+            
+            Padding(padding: const EdgeInsets.all(8.0),
+            child: MaterialButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>PageDua()));},
+            elevation: 18.0,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            color: Colors.amber,
+            clipBehavior: Clip.antiAlias,
+            child: Text('page 2',
+            style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
+            )
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageTiga()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page 3',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageEmpat()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page 4',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+            ],
+        )
       ),
     );
   }
