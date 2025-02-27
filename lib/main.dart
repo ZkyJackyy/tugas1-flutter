@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/screen/page_cache_image.dart';
 import 'package:latihan1/screen/page_dua.dart';
 import 'package:latihan1/screen/page_empat.dart';
+import 'package:latihan1/screen/page_gambar.dart';
 import 'package:latihan1/screen/page_satu.dart';
 import 'package:latihan1/screen/page_tiga.dart';
+import 'package:latihan1/screen/page_url.dart';
 
 void main() {
   runApp(const MyApp());
@@ -96,6 +99,35 @@ class PageOne extends StatelessWidget {
               //ini untuk pindah page
               color: Colors.orange,
               child: Text('Page 4',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageGambar()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page gambar',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageUrl()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page Url',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageCacheImage()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page Cache img',
                 style: TextStyle(fontSize: 14, color: Colors.white ),
               ),
             ),
