@@ -3,7 +3,10 @@ import 'package:latihan1/screen/page_cache_image.dart';
 import 'package:latihan1/screen/page_dua.dart';
 import 'package:latihan1/screen/page_empat.dart';
 import 'package:latihan1/screen/page_gambar.dart';
+import 'package:latihan1/screen/page_listdata.dart';
+import 'package:latihan1/screen/page_notifikasi.dart';
 import 'package:latihan1/screen/page_satu.dart';
+import 'package:latihan1/screen/page_simple_login.dart';
 import 'package:latihan1/screen/page_tiga.dart';
 import 'package:latihan1/screen/page_url.dart';
 
@@ -52,7 +55,7 @@ class PageOne extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Projek 1 mobile lanjutan', 
-        style: TextStyle(color: Colors.amber),
+        style: TextStyle(color: const Color.fromARGB(255, 184, 184, 184)),
         ),
         backgroundColor: Colors.blue,
       ),
@@ -128,6 +131,35 @@ class PageOne extends StatelessWidget {
               //ini untuk pindah page
               color: Colors.orange,
               child: Text('Page Cache img',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageNotifikasi()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page Notifikasi',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageListdata()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page List Data',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageSimpleLogin()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('Page login',
                 style: TextStyle(fontSize: 14, color: Colors.white ),
               ),
             ),
