@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/screen/latihan_form/form_dosen.dart';
+import 'package:latihan1/screen/latihan_form/grid_view_dosen.dart';
+import 'package:latihan1/screen/navbar/page_grid_view.dart';
+import 'package:latihan1/screen/navbar/page_tab_bar.dart';
 import 'package:latihan1/screen/page_cache_image.dart';
 import 'package:latihan1/screen/page_dua.dart';
 import 'package:latihan1/screen/page_empat.dart';
@@ -60,6 +64,7 @@ class PageOne extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
+        
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -163,6 +168,28 @@ class PageOne extends StatelessWidget {
                 style: TextStyle(fontSize: 14, color: Colors.white ),
               ),
             ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>PageTabBar()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('page Tab',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>GridViewDosen()));
+            },
+              //ini untuk pindah page
+              color: Colors.orange,
+              child: Text('page form dosen',
+                style: TextStyle(fontSize: 14, color: Colors.white ),
+              ),
+            ),
+
+            
             ],
         )
       ),
